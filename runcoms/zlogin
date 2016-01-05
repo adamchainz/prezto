@@ -13,8 +13,3 @@
     zcompile "$zcompdump"
   fi
 } &!
-
-# Tell me about what day I am on in my life.
-if [[ -s "${ZDOTDIR:-$HOME}/script/life_days" ]]; then
-  "${ZDOTDIR:-$HOME}/script/life_days"
-fi
