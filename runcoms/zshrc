@@ -94,19 +94,11 @@ EOF
 }
 
 function cdf() {
-  cd "$(pfd)"
+  cd "$(pfd)" || exit 1
 }
 
 function pushdf() {
   pushd "$(pfd)"
-}
-
-function quick-look() {
-  (( $# > 0 )) && qlmanage -p $* &>/dev/null &
-}
-
-function man-preview() {
-  man -t "$@" | open -f -a Preview
 }
 
 function trash() {
@@ -150,6 +142,7 @@ alias lsh='ls -alh'
 # Protecting against rm!
 alias rrm='/bin/rm -i'
 alias rm='trash'
+alias srm='srm --medium --zero'
 
 alias D='cd ~/Downloads'
 alias c=cd
@@ -243,31 +236,24 @@ export ANSIBLE_COW_SELECTION=two-heads
 # MySQL
 export MYSQL_PS1="\u@\h [\c]> "
 
-#  ____        _
-# |  _ \ _   _| |__  _   _
-# | |_) | | | | '_ \| | | |
-# |  _ <| |_| | |_) | |_| |
-# |_| \_\\__,_|_.__/ \__, |
-#                    |___/
-if command -v rbenv 1>/dev/null; then
-  eval "$(rbenv init -)"
-elif command -v brew 1>/dev/null; then
-  export GEM_HOME="$(brew --prefix)/opt/gems"
-  export GEM_PATH="$(brew --prefix)/opt/gems"
+# Brew
+if command -v brew 1>/dev/null; then
+  brew_prefix=$(brew --prefix)
+else
+  brew_prefix=''
 fi
 
-#  ____                 _               _
-# |  _ \ _   _ _ __ ___| |__   __ _ ___(_) ___
-# | |_) | | | | '__/ _ \ '_ \ / _` / __| |/ __|
-# |  __/| |_| | | |  __/ |_) | (_| \__ \ | (__
-# |_|    \__,_|_|  \___|_.__/ \__,_|___/_|\___|
-
-export PUREBASIC_HOME=/Applications/PureBasic/
-export PATH=$PATH:${PUREBASIC_HOME}compilers
+# Ruby
+if command -v rbenv 1>/dev/null; then
+  eval "$(rbenv init -)"
+elif [ -n "$brew_prefix" ]; then
+  export GEM_HOME="$brew_prefix/opt/gems"
+  export GEM_PATH="$brew_prefix/opt/gems"
+fi
 
 # Autojump (load at end to only listen to user's cd commands)
-if command -v brew 1>/dev/null; then
-  [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+if [ -n "$brew_prefix" ]; then
+  [[ -s $brew_prefix/etc/autojump.sh ]] && . $brew_prefix/etc/autojump.sh
 fi
 
 # List directory contents after a 'cd'
