@@ -231,7 +231,8 @@ pyclean () {
 }
 
 # Ansible
-export ANSIBLE_COW_SELECTION=two-heads
+# export ANSIBLE_COW_SELECTION=two-heads
+export ANSIBLE_NOCOWS=1
 
 # MySQL
 export MYSQL_PS1="\u@\h [\c]> "
