@@ -183,6 +183,10 @@ alias gaa="g add --all && git status"
 alias gpp="pull && push"
 alias gap="g add -p"
 
+
+# 'hub' aliases
+alias hpr='hub pull-request -o'
+
 # Other app aliases
 alias node-interactive="repl.history"
 alias _string="gumba"
