@@ -140,7 +140,7 @@ alias lsh='ls -alh'
 # Protecting against rm!
 alias rrm='/bin/rm -i'
 alias rm='trash'
-alias srm='srm --medium --zero'
+alias srm='srm -r --dod'
 
 alias D='cd ~/Downloads'
 alias c=cd
