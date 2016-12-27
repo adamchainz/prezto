@@ -268,11 +268,7 @@ function chpwd() {
 [[ -s ~/bin/arcanist ]] && source ~/bin/arcanist/resources/shell/bash-completion
 
 # Ex-oh-my-zsh plugins
-if [[ -d /Applications/Sublime\ Text.app ]]; then
-  alias st='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
-else
-    alias st=nano
-fi
+alias st=subl
 
 # Extra secrets for this computer
 if [[ -s ~/.zsecret ]]; then
