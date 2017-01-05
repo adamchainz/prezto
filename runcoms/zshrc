@@ -129,21 +129,12 @@ function trash() {
 alias lsa='ls -al'
 alias lsl='ls -1'
 alias lsh='ls -alh'
-# Color listing
-# eval $(dircolors ~/.dir_colors)
-# zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-# export LS_OPTIONS='--color'
-# alias sl='ls $LS_OPTIONS' # often screw this up
-# alias la='ls -A $LS_OPTIONS'
-# alias lsl='ls -alF $LS_OPTIONS'
-# alias lc='ls -R $LS_OPTIONS'
 
 # Protecting against rm!
 alias rrm='/bin/rm -i'
 alias rm='trash'
 alias srm='srm -r --dod'
 
-alias D='cd ~/Downloads'
 alias c=cd
 
 # GIT Aliases
@@ -179,23 +170,15 @@ alias pull="g pull"
 alias push="g push"
 
 alias gaa="g add --all && git status"
-alias gpp="pull && push"
 alias gap="g add -p"
-
 
 # 'hub' aliases
 alias hpr='hub pull-request -o'
 
 # Other app aliases
-alias node-interactive="repl.history"
-alias _string="gumba"
-alias jpegoptim="jpegoptim --strip-all"
 alias optimize_jpegs="find . -iname \"*.jpg\" -exec jpegoptim --strip-all {} \;"
-alias cw="compass watch"
-alias vlc="rlwrap /Applications/VLC.app/Contents/MacOS/VLC -I cli"
 alias ql="quick-look" # preview a file using QuickLook
 alias chrome="/usr/bin/open -a \"/Applications/Google Chrome.app\""
-alias itunes="/usr/bin/open -a \"/Applications/iTunes.app\""
 
 # Lifelogger aliases
 alias l=lifelogger
@@ -211,12 +194,7 @@ function calc {
 alias finder_show_hidden="defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder"
 alias finder_hide_hidden="defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder"
 
-#  ____        _   _
-# |  _ \ _   _| |_| |__   ___  _ __
-# | |_) | | | | __| '_ \ / _ \| '_ \
-# |  __/| |_| | |_| | | | (_) | | | |
-# |_|    \__, |\__|_| |_|\___/|_| |_|
-#        |___/
+# Python
 
 # Set python environment to IPython
 export PYTHONSTARTUP=~/.python_startup
