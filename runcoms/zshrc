@@ -50,7 +50,7 @@ bindkey "^[OB" 'down-line-or-search-prefix'
 compinit -u
 
 # AWS
-[[ $PROMPT =~ '☁' ]] || export PROMPT="☁️  \${AWS_PROFILE:-default} $PROMPT"
+[[ $PROMPT =~ '>' ]] || export PROMPT="> \${AWS_PROFILE:-default} $PROMPT"
 [[ -s /usr/local/bin/aws_zsh_completer.sh ]] && source /usr/local/bin/aws_zsh_completer.sh
 
 #   ___  ____
