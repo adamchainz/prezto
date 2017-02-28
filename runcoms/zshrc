@@ -170,6 +170,7 @@ compdef _git gld0=git-log
 alias glp='git log --topo-order --stat --patch -U0 --pretty=format:${_git_log_medium_format} --follow'
 
 alias pull="g pull"
+alias pulp="g pull --prune"
 alias push="g push"
 
 alias gaa="g add --all && git status"
