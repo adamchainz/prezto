@@ -150,6 +150,9 @@ compdef _git gs=git-status
 alias gsl="git status | less -R"
 compdef _git gsl=git-status
 
+alias gcom="g checkout master"
+compdef _git gcom=git-checkout
+
 alias gcm="g commit -m"
 compdef _git gcm=git-commit
 
