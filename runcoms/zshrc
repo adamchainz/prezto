@@ -179,6 +179,8 @@ alias push="g push"
 alias gaa="g add --all && git status"
 alias gap="g add -p"
 
+alias grim="git rebase --interactive master"
+
 # 'hub' aliases
 alias hpr='hub pull-request -o'
 
