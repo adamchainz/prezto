@@ -66,7 +66,7 @@ export PATH=$PATH:/usr/local/share/npm/bin:/usr/local/mysql/bin:/Applications/In
 export PATH=$PATH:/usr/local/heroku/bin:/usr/local/opt/gems/bin
 export PATH=$PATH:/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin
 export PATH=$PATH:/usr/X11/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/local/libexec/gnubin:/opt/local/bin:/opt/local/sbin
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export PATH=$PATH:/usr/local/opt/go/libexec/bin:~/go/bin
 
 # Increase file-watchable number
 ulimit -n 4096
@@ -181,6 +181,8 @@ alias gaa="g add --all && git status"
 alias gap="g add -p"
 
 alias grim="git rebase --interactive master"
+
+unalias gdm 2>/dev/null # interferes with go dependency manager
 
 # 'hub' aliases
 alias hpr='hub pull-request -o'
