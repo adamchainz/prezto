@@ -187,6 +187,10 @@ unalias gdm 2>/dev/null # interferes with go dependency manager
 # 'hub' aliases
 alias hpr='hub pull-request -o'
 
+# arcanist aliases
+alias ad='arc diff'
+alias al='arc land'
+
 # Other app aliases
 alias optimize_jpegs="find . -iname \"*.jpg\" -exec jpegoptim --strip-all {} \;"
 alias ql="quick-look" # preview a file using QuickLook
