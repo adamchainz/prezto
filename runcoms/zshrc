@@ -190,6 +190,7 @@ alias hpr='hub pull-request -o'
 # arcanist aliases
 alias ad='arc diff'
 alias al='arc land'
+alias ali='arc lint'
 
 # Other app aliases
 alias optimize_jpegs="find . -iname \"*.jpg\" -exec jpegoptim --strip-all {} \;"
