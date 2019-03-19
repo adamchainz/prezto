@@ -219,7 +219,6 @@ alias finder_hide_hidden="defaults write com.apple.finder AppleShowAllFiles FALS
 export PYTHONSTARTUP=~/.python_startup
 
 unalias py >/dev/null 2>&1 || true
-alias json_format="python -m json.tool"
 
 # For virtualenvs
 unfunction chpwd >/dev/null 2>&1 || true  # Is reset in a few lines - virtualenvwrapper does a few `cd`s
@@ -231,7 +230,6 @@ pyclean () {
 }
 
 # Ansible
-# export ANSIBLE_COW_SELECTION=two-heads
 export ANSIBLE_NOCOWS=1
 
 # MySQL
