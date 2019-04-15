@@ -216,9 +216,6 @@ alias finder_hide_hidden="defaults write com.apple.finder AppleShowAllFiles FALS
 
 # Python
 
-# Set python environment to IPython
-export PYTHONSTARTUP=~/.python_startup
-
 unalias py >/dev/null 2>&1 || true
 
 # For virtualenvs
