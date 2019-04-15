@@ -223,7 +223,7 @@ unalias py >/dev/null 2>&1 || true
 
 # For virtualenvs
 unfunction chpwd >/dev/null 2>&1 || true  # Is reset in a few lines - virtualenvwrapper does a few `cd`s
-[[ -s /usr/local/bin/virtualenvwrapper.sh ]] && source /usr/local/bin/virtualenvwrapper.sh
+pyenv which virtualenvwrapper.sh >/dev/null && source "$(pyenv which virtualenvwrapper.sh)"
 
 pyclean () {
     find . -type f -name "*.py[co]" -delete

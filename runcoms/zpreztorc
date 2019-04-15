@@ -131,6 +131,8 @@ zstyle ':prezto:module:prompt' theme 'chainz'
 # Automatically initialize virtualenvwrapper if pre-requisites are met.
 # zstyle ':prezto:module:python:virtualenv' initialize 'yes'
 
+zstyle ':prezto:module:python:virtualenv' initialize 'no'
+
 #
 # Ruby
 #
