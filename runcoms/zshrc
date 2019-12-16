@@ -155,7 +155,7 @@ compdef g=git
 alias gbD='git branch -D'
 compdef _git gs=git-branch
 
-alias gs="git status -s"
+alias gs="git status -s -b"
 compdef _git gs=git-status
 alias gsl="git status | less -R"
 compdef _git gsl=git-status
