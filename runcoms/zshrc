@@ -148,7 +148,7 @@ alias c=cd
 
 # GIT Aliases
 
-unalias gm  # interferes with graphicsmagick
+unalias gm 2>/dev/null # interferes with graphicsmagick
 
 alias g='git'
 compdef g=git
