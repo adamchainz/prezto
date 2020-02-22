@@ -63,7 +63,6 @@ compinit -u
 # Customize to your needs...
 export PATH=~/script:~/bin
 export PATH=$PATH:/usr/local/share/npm/bin:/usr/local/mysql/bin:/Applications/Inkscape.app/Contents/Resources/bin
-export PATH=$PATH:~/.pyenv/shims
 export PATH=$PATH:~/.cargo/bin
 export PATH=$PATH:/usr/local/heroku/bin:/usr/local/opt/ruby/bin:/usr/local/opt/gems/bin
 export PATH=$PATH:/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin
@@ -229,6 +228,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 
 # Python
+
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
 
 unalias py >/dev/null 2>&1 || true
 
