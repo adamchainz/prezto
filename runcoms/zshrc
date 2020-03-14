@@ -53,6 +53,12 @@ compinit -u
 [[ $PROMPT =~ '>' ]] || export PROMPT="> \${AWS_PROFILE:-default} $PROMPT"
 [[ -s /usr/local/bin/aws_zsh_completer.sh ]] && source /usr/local/bin/aws_zsh_completer.sh
 
+# Simple prompt
+simple-prompt() {
+  export PROMPT="$ "
+  export RPROMPT=""
+}
+
 #   ___  ____
 #  / _ \/ ___|
 # | | | \___ \
