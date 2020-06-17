@@ -157,6 +157,8 @@ alias c=cd
 
 unalias gm 2>/dev/null # interferes with graphicsmagick
 
+alias git-branch-main-or-master="if git rev-parse --quiet --verify main >/dev/null; then echo -n main; else; echo -n master; fi"
+
 alias g='git'
 compdef g=git
 
@@ -168,7 +170,7 @@ compdef _git gs=git-status
 alias gsl="git status | less -R"
 compdef _git gsl=git-status
 
-alias gcom="git switch main || git switch master"
+alias gcom='git switch $(git-branch-main-or-master)'
 
 alias gcm="g commit -m"
 compdef _git gcm=git-commit
@@ -197,7 +199,7 @@ alias pushup='git push -u origin $(git rev-parse --abbrev-ref HEAD)'
 alias gaa="g add --all && git status"
 alias gap="g add -p"
 
-alias grim="git rebase --interactive master"
+alias grim='git rebase --interactive $(git-branch-main-or-master)'
 
 unalias gdm 2>/dev/null # interferes with go dependency manager
 
