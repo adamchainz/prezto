@@ -245,10 +245,6 @@ fi
 alias pip='python -m pip'
 export PIP_REQUIRE_VIRTUALENV=true
 unalias py >/dev/null 2>&1 || true
-
-# For virtualenvs
-unfunction chpwd >/dev/null 2>&1 || true  # Is reset in a few lines - virtualenvwrapper does a few `cd`s
-pyenv which virtualenvwrapper.sh >/dev/null && source "$(pyenv which virtualenvwrapper.sh)"
 export VIRTUAL_ENV_DISABLE_PROMPT=1  # ZSH theme already reports virtualenv
 
 pyclean () {
