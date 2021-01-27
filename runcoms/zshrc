@@ -6,6 +6,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+eval "$(starship init zsh)"
+export RPROMPT=""
+
 alias take=mkdcd
 
 zstyle ':prezto:module:editor:info:completing' format ''
@@ -50,7 +53,6 @@ bindkey "^[OB" 'down-line-or-search-prefix'
 compinit -u
 
 # AWS
-[[ $PROMPT =~ '>' ]] || export PROMPT="> \${AWS_PROFILE:-default} $PROMPT"
 [[ -s /usr/local/bin/aws_zsh_completer.sh ]] && source /usr/local/bin/aws_zsh_completer.sh
 
 # Simple prompt
