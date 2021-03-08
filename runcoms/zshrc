@@ -52,6 +52,9 @@ bindkey "^[OB" 'down-line-or-search-prefix'
 [[ -s /usr/local/share/zsh-completions ]] && fpath=(/usr/local/share/zsh-completions $fpath)
 compinit -u
 
+# iTerm integration
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
 # AWS
 [[ -s /usr/local/bin/aws_zsh_completer.sh ]] && source /usr/local/bin/aws_zsh_completer.sh
 
