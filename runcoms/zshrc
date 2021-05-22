@@ -72,14 +72,13 @@ simple-prompt() {
 #
 
 # Customize to your needs...
-export PATH=~/script:~/bin
+export PATH=$PATH:~/script:~/bin
 export PATH=$PATH:/usr/local/share/npm/bin:/usr/local/mysql/bin:/Applications/Inkscape.app/Contents/Resources/bin
 export PATH=$PATH:~/.cargo/bin
 export PATH=$PATH:/usr/local/heroku/bin:/usr/local/opt/ruby/bin:/usr/local/opt/gems/bin
 export PATH=$PATH:~/.yarn/bin:~/.config/yarn/global/node_modules/.bin
-export PATH=$PATH:/Library/TeX/texbin/
 export PATH=$PATH:/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin
-export PATH=$PATH:/usr/X11/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/local/libexec/gnubin
+export PATH=$PATH:/opt/local/libexec/gnubin
 export PATH=$PATH:/usr/local/opt/gettext/bin:/opt/local/bin:/opt/local/sbin
 export PATH=$PATH:/usr/local/opt/go/libexec/bin:~/go/bin
 
@@ -241,10 +240,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 
 # Python
-
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
+eval "$(pyenv init -)"
 
 alias pip='python -m pip'
 export PIP_REQUIRE_VIRTUALENV=true
