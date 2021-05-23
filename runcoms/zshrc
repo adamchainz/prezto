@@ -72,10 +72,11 @@ simple-prompt() {
 #
 
 # Customize to your needs...
-export PATH=$PATH:~/script:~/bin
+export PATH=~/script:~/bin:$PATH
 export PATH=$PATH:/usr/local/share/npm/bin:/usr/local/mysql/bin:/Applications/Inkscape.app/Contents/Resources/bin
+export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH=$PATH:~/.cargo/bin
-export PATH=$PATH:/usr/local/heroku/bin:/usr/local/opt/ruby/bin:/usr/local/opt/gems/bin
+export PATH=$PATH:/usr/local/heroku/bin:/usr/local/opt/gems/bin
 export PATH=$PATH:~/.yarn/bin:~/.config/yarn/global/node_modules/.bin
 export PATH=$PATH:/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin
 export PATH=$PATH:/opt/local/libexec/gnubin
